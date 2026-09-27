@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
+<meta name="googlebot" content="noindex, nofollow" />
+<title>Navratri Yatra 2026 — Orientation</title>
+
+<style>
+/* ============ FONTS ============ */
+@font-face{
+  font-family:"Craos";
+  src:url("assets/fonts/Craos.otf") format("opentype");
+  font-weight:400; font-style:normal; font-display:swap;
+}
+@font-face{
+  font-family:"Selawik";
+  src:url("assets/fonts/selawkl.ttf") format("truetype");
+  font-weight:300; font-style:normal; font-display:swap;
+}
+@font-face{
+  font-family:"Selawik";
+  src:url("assets/fonts/selawk.ttf") format("truetype");
+  font-weight:400; font-style:normal; font-display:swap;
+}
+@font-face{
+  font-family:"Selawik";
+  src:url("assets/fonts/selawksb.ttf") format("truetype");
+  font-weight:600; font-style:normal; font-display:swap;
+}
+@font-face{
+  font-family:"Selawik";
+  src:url("assets/fonts/selawkb.ttf") format("truetype");
+  font-weight:700; font-style:normal; font-display:swap;
+}
+
+/* ============ TOKENS ============ */
+:root{
+  --cream:#F7F1E6;
+  --sand:#EFE4D2;
+  --gold:#C9A24B;
+  --terracotta:#C87B5A;
+  --teal:#6FA8A0;
+  --ink:#3A322A;
+  --ink-soft:#6A5F52;
+  --paper:#FBF7EF;
+  --shadow:0 24px 60px -24px rgba(58,50,42,.35);
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{height:100%;background:#000;overflow:hidden;}
+body{
+  font-family:"Selawik",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  color:var(--ink);
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+
+/* ============ DECK ============ */
+#deck{position:fixed;inset:0;background:var(--cream);}
+
+.slide{
+  position:absolute;inset:0;
+  opacity:0;visibility:hidden;
+  transition:opacity 1.15s var(--ease), visibility 0s linear 1.15s;
+  overflow:hidden;
+  display:flex;
+  will-change:opacity;
+}
+.slide.active{
+  opacity:1;visibility:visible;
+  transition:opacity 1.15s var(--ease), visibility 0s;
+  z-index:2;
+}
+
+/* ---- background layer with Ken Burns ---- */
+.bg{
+  position:absolute;inset:0;
+  background-size:cover;background-position:center;
+  transform:scale(1.02);
+  transition:transform 0s;
+}
+.slide.active .bg{
+  animation:kenburns 16s var(--ease) forwards;
+}
+@keyframes kenburns{
+  from{transform:scale(1.02) translate3d(0,0,0);}
+  to{transform:scale(1.12) translate3d(-1.5%, -1%,0);}
+}
+.bg.pan-right{animation-name:kenburns-r !important;}
+@keyframes kenburns-r{
+  from{transform:scale(1.03) translate3d(1%,0,0);}
+  to{transform:scale(1.12) translate3d(-1.5%,-1.5%,0);}
+}
+
+/* ---- veils for legibility ---- */
+.veil{position:absolute;inset:0;}
+.veil.bottom{background:linear-gradient(to top, rgba(30,24,18,.72) 0%, rgba(30,24,18,.25) 40%, rgba(30,24,18,0) 68%);}
+.veil.left{background:linear-gradient(to right, rgba(30,24,18,.66) 0%, rgba(30,24,18,.20) 45%, rgba(30,24,18,0) 75%);}
+.veil.soft{background:linear-gradient(to top, rgba(30,24,18,.45), rgba(30,24,18,.10));}
+.veil.paper{background:linear-gradient(135deg, rgba(247,241,230,.86), rgba(239,228,210,.72));}
+
+/* ---- content ---- */
+.content{
+  position:relative;z-index:3;
+  width:100%;
+  display:flex;flex-direction:column;
+  padding:clamp(32px,7vw,120px);
+}
+.content.bl{justify-content:flex-end;align-items:flex-start;}
+.content.center{justify-content:center;align-items:center;text-align:center;}
+.content.left-mid{justify-content:center;align-items:flex-start;}
+
+/* staggered reveal */
+.reveal{opacity:0;transform:translateY(22px);}
+.slide.active .reveal{
+  animation:rise 1s var(--ease) forwards;
+}
+.slide.active .reveal.d1{animation-delay:.35s;}
+.slide.active .reveal.d2{animation-delay:.55s;}
+.slide.active .reveal.d3{animation-delay:.75s;}
+.slide.active .reveal.d4{animation-delay:.95s;}
+.slide.active .reveal.d5{animation-delay:1.15s;}
+@keyframes rise{to{opacity:1;transform:translateY(0);}}
+
+/* ============ TYPE ============ */
+.kicker{
+  font-family:"Selawik";font-weight:600;
+  font-size:clamp(11px,1.1vw,14px);
+  letter-spacing:.42em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:1.4rem;
+}
+.kicker.on-dark{color:#E9C878;}
+
+.display{
+  font-family:"Craos","Selawik",serif;
+  font-weight:400;line-height:.98;
+  letter-spacing:.01em;
+}
+.title-hero{
+  font-size:clamp(52px,10vw,148px);
+  color:#FBF7EF;
+  text-shadow:0 6px 40px rgba(0,0,0,.35);
+}
+.title-2{
+  font-family:"Craos","Selawik",serif;
+  font-size:clamp(40px,7.5vw,104px);
+  line-height:1.02;color:#FBF7EF;
+  text-shadow:0 6px 40px rgba(0,0,0,.35);
+}
+.date-line{
+  font-family:"Selawik";font-weight:300;
+  font-size:clamp(16px,2vw,26px);
+  letter-spacing:.30em;text-transform:uppercase;
+  color:#F3E6CC;margin-top:1.8rem;
+}
+
+.h-section{
+  font-family:"Selawik";font-weight:700;
+  font-size:clamp(32px,5.4vw,68px);
+  line-height:1.04;letter-spacing:-.01em;
+}
+.h-section.on-dark{color:#FBF7EF;text-shadow:0 4px 30px rgba(0,0,0,.35);}
+.h-section.on-light{color:var(--ink);}
+
+.lead{
+  font-family:"Selawik";font-weight:300;
+  font-size:clamp(17px,2vw,24px);
+  line-height:1.5;max-width:36ch;
+}
+.lead.on-dark{color:#F2EADB;}
+.lead.on-light{color:var(--ink-soft);}
+
+/* list */
+.list{list-style:none;display:flex;flex-direction:column;gap:1rem;margin-top:2rem;max-width:44ch;}
+.list li{
+  font-family:"Selawik";font-weight:300;
+  font-size:clamp(16px,1.85vw,23px);
+  line-height:1.4;position:relative;padding-left:2.1rem;
+}
+.list.on-dark li{color:#F2EADB;}
+.list.on-light li{color:var(--ink);}
+.list li::before{
+  content:"";position:absolute;left:0;top:.62em;
+  width:11px;height:11px;border-radius:50%;
+  background:var(--gold);
+}
+.list li b{font-weight:600;color:#fff;}
+.list.on-light li b{color:var(--ink);}
+
+/* pill row (optional extras) */
+.pills{display:flex;flex-wrap:wrap;gap:1rem;margin-top:2.4rem;}
+.pill{
+  display:flex;align-items:center;gap:.7rem;
+  padding:.85rem 1.5rem;border-radius:999px;
+  background:rgba(251,247,239,.14);
+  border:1px solid rgba(251,247,239,.30);
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  color:#FBF7EF;font-weight:400;
+  font-size:clamp(15px,1.7vw,21px);
+}
+.pill .em{font-size:1.3em;}
+
+/* two-column card (costs) */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,48px);margin-top:2.4rem;max-width:1000px;width:100%;}
+.card{
+  background:rgba(251,247,239,.90);
+  border:1px solid rgba(201,162,75,.35);
+  border-radius:22px;padding:clamp(22px,2.6vw,38px);
+  box-shadow:var(--shadow);backdrop-filter:blur(6px);
+}
+.card h4{
+  font-family:"Selawik";font-weight:700;
+  font-size:clamp(17px,1.9vw,24px);color:var(--ink);
+  margin-bottom:1.2rem;display:flex;align-items:center;gap:.6rem;flex-wrap:wrap;
+}
+.card .tag{
+  font-size:.62em;font-weight:600;letter-spacing:.12em;text-transform:uppercase;
+  color:#fff;background:var(--terracotta);padding:.28em .7em;border-radius:999px;
+}
+.card .tag.card-tag{background:var(--teal);}
+.card ul{list-style:none;display:flex;flex-direction:column;gap:.85rem;}
+.card li{
+  font-family:"Selawik";font-weight:300;
+  font-size:clamp(15px,1.6vw,20px);color:var(--ink);
+  padding-left:1.5rem;position:relative;line-height:1.35;
+}
+.card li::before{content:"";position:absolute;left:0;top:.6em;width:7px;height:7px;border-radius:50%;background:var(--gold);}
+.note{
+  margin-top:1.8rem;font-family:"Selawik";font-weight:300;font-style:italic;
+  font-size:clamp(14px,1.5vw,19px);color:var(--ink-soft);max-width:60ch;
+}
+.note.on-dark{color:#EBE0CE;}
+.strike{text-decoration:line-through;opacity:.5;}
+.hl{background:linear-gradient(transparent 55%, rgba(111,168,160,.5) 55%);padding:0 .12em;font-weight:600;}
+
+/* gallery (day trips) */
+.gallery{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,2.4vw,32px);margin-top:2.4rem;max-width:1040px;width:100%;}
+.gcard{
+  border-radius:22px;overflow:hidden;position:relative;
+  box-shadow:var(--shadow);aspect-ratio:4/3;
+}
+.gcard img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 1.2s var(--ease);}
+.gcard:hover img{transform:scale(1.06);}
+.gcard .cap{
+  position:absolute;left:0;right:0;bottom:0;
+  padding:1.4rem 1.5rem 1.2rem;
+  background:linear-gradient(to top, rgba(30,24,18,.82), rgba(30,24,18,0));
+  color:#FBF7EF;
+}
+.gcard .cap .n{font-family:"Selawik";font-weight:600;font-size:clamp(18px,2vw,26px);}
+.gcard .cap .c{font-family:"Selawik";font-weight:300;font-size:clamp(14px,1.5vw,18px);color:#EBD9B4;margin-top:.25rem;letter-spacing:.02em;}
+.gnote{margin-top:1.4rem;font-weight:300;font-style:italic;color:var(--ink-soft);font-size:clamp(14px,1.5vw,18px);}
+.gnote.on-dark{color:#EBE0CE;}
+
+/* thanks */
+.thanks{
+  font-family:"Craos","Selawik",serif;
+  font-size:clamp(56px,11vw,150px);color:#FBF7EF;
+  text-shadow:0 6px 40px rgba(0,0,0,.4);line-height:1;
+}
+
+/* ============ CHROME ============ */
+.chrome{position:fixed;z-index:40;}
+/* dots */
+#dots{
+  left:50%;bottom:26px;transform:translateX(-50%);
+  display:flex;gap:10px;padding:10px 16px;border-radius:999px;
+  background:rgba(20,16,12,.28);backdrop-filter:blur(10px);
+}
+#dots button{
+  width:8px;height:8px;border-radius:50%;border:0;padding:0;cursor:pointer;
+  background:rgba(251,247,239,.45);transition:all .4s var(--ease);
+}
+#dots button.on{background:var(--gold);width:26px;border-radius:999px;}
+
+/* arrows */
+.nav-arrow{
+  top:50%;transform:translateY(-50%);
+  width:52px;height:52px;border-radius:50%;border:0;cursor:pointer;
+  background:rgba(20,16,12,.24);color:#FBF7EF;
+  backdrop-filter:blur(8px);font-size:22px;line-height:1;
+  display:flex;align-items:center;justify-content:center;
+  transition:background .3s,opacity .3s;opacity:.55;
+}
+.nav-arrow:hover{background:rgba(20,16,12,.5);opacity:1;}
+#prev{left:22px;} #next{right:22px;}
+
+/* counter */
+#counter{
+  top:24px;right:28px;
+  font-family:"Selawik";font-weight:600;font-size:13px;letter-spacing:.16em;
+  color:#FBF7EF;mix-blend-mode:difference;
+}
+#counter .cur{font-size:16px;}
+
+/* progress bar */
+#bar{top:0;left:0;height:3px;background:var(--gold);width:0;
+  transition:width .8s var(--ease);z-index:41;box-shadow:0 0 12px rgba(201,162,75,.6);}
+
+/* brand mark */
+#mark{
+  top:22px;left:28px;
+  font-family:"Craos","Selawik",serif;font-size:19px;letter-spacing:.06em;
+  color:#FBF7EF;mix-blend-mode:difference;opacity:.9;
+}
+
+/* hint */
+#hint{
+  left:50%;bottom:72px;transform:translateX(-50%);
+  font-family:"Selawik";font-weight:300;font-size:12px;letter-spacing:.22em;text-transform:uppercase;
+  color:rgba(251,247,239,.7);animation:fadeHint 4s ease forwards;pointer-events:none;
+}
+@keyframes fadeHint{0%,70%{opacity:.7;}100%{opacity:0;}}
+
+/* responsive */
+@media (max-width:760px){
+  .cols{grid-template-columns:1fr;}
+  .gallery{grid-template-columns:1fr;}
+  #prev,#next{display:none;}
+  .content{padding:26px 24px 90px;}
+  .list li{padding-left:1.7rem;}
+}
+@media (prefers-reduced-motion:reduce){
+  .slide.active .bg{animation:none;transform:scale(1.04);}
+  .reveal{opacity:1 !important;transform:none !important;animation:none !important;}
+}
+</style>
+</head>
+<body>
+
+<div id="deck">
+
+  <!-- 01 — TITLE -->
+  <section class="slide">
+    <div class="bg" style="background-image:url('assets/maa/maa-hero.jpg');background-position:center 20%;"></div>
+    <div class="veil bottom"></div>
+    <div class="content bl">
+      <div class="kicker on-dark reveal d1">Puttaparthi · India</div>
+      <h1 class="display title-hero reveal d2">Navratri<br>Yatra</h1>
+      <div class="date-line reveal d3">11 – 20 October 2026</div>
+    </div>
+  </section>
+
+  <!-- 02 — AN OFFERING TO MAA -->
+  <section class="slide">
+    <div class="bg pan-right" style="background-image:url('assets/maa/maa-blue.jpg');background-position:center 30%;"></div>
+    <div class="veil left"></div>
+    <div class="content left-mid">
+      <div class="kicker on-dark reveal d1">A Pilgrimage of the Heart</div>
+      <h2 class="display title-2 reveal d2">An offering<br>to Maa</h2>
+    </div>
+  </section>
+
+  <!-- 03 — WELCOME -->
+  <section class="slide">
+    <div class="bg" style="background-image:url('assets/maa/maa-marigold.jpg');background-position:center 25%;"></div>
+    <div class="veil left"></div>
+    <div class="content left-mid">
+      <div class="kicker on-dark reveal d1">Welcome</div>
+      <h3 class="h-section on-dark reveal d2">Let us begin<br>by knowing you</h3>
+      <ul class="list on-dark reveal d3">
+        <li>Your name</li>
+        <li>The centre you belong to</li>
+        <li>What you hope to receive from the Yatra</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 04 — THE INNER JOURNEY -->
+  <section class="slide">
+    <div class="bg" style="background-image:url('assets/stock/s04-inner-journey.jpg');"></div>
+    <div class="veil soft"></div>
+    <div class="content center">
+      <div class="kicker reveal d1" style="color:#B4894A;">Intention</div>
+      <h3 class="display title-2 reveal d2" style="color:#4A3E30;text-shadow:none;">The inner journey</h3>
+      <p class="lead on-light reveal d3" style="margin-top:1.6rem;color:#6A5F52;">
+        Beyond the miles we travel lies the journey inward — the true purpose of this Yatra.
+      </p>
+    </div>
+  </section>
+
+  <!-- 05 — A MESSAGE FROM MAA -->
+  <section class="slide">
+    <div class="bg pan-right" style="background-image:url('assets/maa/maa-jasmine.jpg');background-position:center 22%;"></div>
+    <div class="veil bottom"></div>
+    <div class="content bl">
+      <div class="kicker on-dark reveal d1">A Message from Maa</div>
+      <h3 class="h-section on-dark reveal d2" style="max-width:16ch;">Travel gently,<br>travel protected</h3>
+      <ul class="list on-dark reveal d3">
+        <li><b>The Evil Eye</b> — hold your intentions quietly.</li>
+        <li>Please don't mention the reason you are in Parthi.</li>
+        <li>Travel together, in groups.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 06 — TRANSPORT -->
+  <section class="slide">
+    <div class="bg" style="background-image:url('assets/stock/s06-transport.jpg');"></div>
+    <div class="veil bottom"></div>
+    <div class="content bl">
+      <div class="kicker reveal d1" style="color:#C08A4A;">Getting There &amp; Around</div>
+      <h3 class="h-section on-dark reveal d2">Transport requirements</h3>
+      <p class="lead on-dark reveal d3">
+        Ground transport is arranged for the group throughout your stay in Parthi —
+        to the Temple, Baba's Lake, and around town.
+      </p>
+    </div>
+  </section>
+
+  <!-- 07 — PACKAGE INCLUDES -->
+  <section class="slide">
+    <div class="bg" style="background-image:url('assets/stock/s07-package-includes.jpg');"></div>
+    <div class="veil left"></div>
+    <div class="content left-mid">
+      <div class="kicker on-dark reveal d1">The Yatra Package Includes</div>
+      <h3 class="h-section on-dark reveal d2" style="margin-bottom:.4rem;">All that is held<br>for you</h3>
+      <ul class="list on-dark reveal d3">
+        <li>Navratri festival costs</li>
+        <li>Daily ground transportation</li>
+        <li>Transport around town — Temple, Baba's Lake and more</li>
+        <li>Tips for Temple workers, drummers &amp; drivers <span style="opacity:.7">(ground transport only)</span></li>
+        <li>Dinner at the Temple for all — including the Kunchapu family &amp; Temple workers</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 08 — OPTIONAL EXTRAS -->
+  <section class="slide">
+    <div class="bg" style="background-image:url('assets/stock/s08-optional-extras.jpg');"></div>
+    <div class="veil bottom"></div>
+    <div class="content bl">
+      <div class="kicker reveal d1" style="color:#C08A4A;">At Your Discretion</div>
+      <h3 class="h-section on-dark reveal d2">Optional extras</h3>
+      <div class="pills reveal d3">
+        <span class="pill"><span class="em">🚗</span> Airport transfers</span>
+        <span class="pill"><span class="em">👗</span> Mulberry blouses</span>
+        <span class="pill"><span class="em">📱</span> SIM cards</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 09 — COSTS -->
+  <section class="slide">
+    <div class="bg" style="background-image:url('assets/stock/s09-currency.jpg');"></div>
+    <div class="veil paper"></div>
+    <div class="content center">
+      <div class="kicker reveal d1">Costs</div>
+      <h3 class="h-section on-light reveal d2" style="text-align:center;">A little planning goes a long way</h3>
+      <div class="cols reveal d3">
+        <div class="card">
+          <h4><span class="tag">Cash</span> You <span class="hl">may</span> require cash for</h4>
+          <ul>
+            <li>The Navratri package</li>
+            <li>Airport transfers</li>
+            <li>Optional SIM cards &amp; mulberry blouses</li>
+            <li>Tips &amp; roadside purchases</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4><span class="tag card-tag">Card</span> You can pay by credit card for</h4>
+          <ul>
+            <li>Hotel costs</li>
+            <li>Items purchased at supermarkets</li>
+            <li>Restaurant dining</li>
+          </ul>
+        </div>
+      </div>
+      <p class="note reveal d4" style="text-align:center;">Devotees may pay for the above in their preferred currency as well.</p>
+    </div>
+  </section>
+
+  <!-- 10 — MONEY EXCHANGE -->
+  <section class="slide">
+    <div class="bg" style="background-image:url('assets/stock/s09-currency.jpg');background-position:center 60%;"></div>
+    <div class="veil left"></div>
+    <div class="content left-mid">
+      <div class="kicker on-dark reveal d1">Money &amp; Currency</div>
+      <h3 class="h-section on-dark reveal d2">Bring cash,<br>bring ease</h3>
+      <ul class="list on-dark reveal d3">
+        <li>Carry cash in your <b>own currency</b> — enough to cover the Navratri package, airport transfers and any optional extras.</li>
+        <li>Plus a little extra for anything not on card — tips, small roadside purchases.</li>
+        <li><b>ATMs</b> are available; we'll point you to the best ones.</li>
+        <li>Withdrawal limit: <b>₹10,000</b> per transaction.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 11 — DAY TRIPS -->
+  <section class="slide">
+    <div class="bg" style="background-image:url('assets/stock/s11-nandi-hills.jpg');"></div>
+    <div class="veil paper"></div>
+    <div class="content center">
+      <div class="kicker reveal d1">Day Trips · At Additional Cost</div>
+      <h3 class="h-section on-light reveal d2" style="text-align:center;">Beyond Parthi</h3>
+      <div class="gallery reveal d3">
+        <div class="gcard">
+          <img src="assets/stock/s11-nandi-hills.jpg" alt="Nandi Hills at dawn" loading="lazy">
+          <div class="cap"><div class="n">Nandi Hills</div><div class="c">₹5,500 · sunrise over the clouds</div></div>
+        </div>
+        <div class="gcard">
+          <img src="assets/stock/s11-lepakshi.jpg" alt="Lepakshi Temple stone pillars" loading="lazy">
+          <div class="cap"><div class="n">Lepakshi Temple</div><div class="c">₹4,500 · Vijayanagara heritage</div></div>
+        </div>
+      </div>
+      <p class="gnote reveal d4" style="text-align:center;">Cost includes fuel, tolls and parking.</p>
+    </div>
+  </section>
+
+  <!-- 12 — SPECIAL CONSIDERATIONS -->
+  <section class="slide">
+    <div class="bg" style="background-image:url('assets/stock/s12-healing-nature.jpg');"></div>
+    <div class="veil soft"></div>
+    <div class="content center">
+      <div class="kicker reveal d1" style="color:#8FA36A;">With Care &amp; Grace</div>
+      <h3 class="display title-2 reveal d2" style="color:#3F4A32;text-shadow:none;">Special considerations</h3>
+      <p class="lead reveal d3" style="margin-top:1.4rem;color:#4E5A3E;text-align:center;max-width:40ch;">
+        A gentle word on menstruation, pregnancy, married couples, and taking part in the Homa —
+        speak with us quietly and we'll guide you with love.
+      </p>
+    </div>
+  </section>
+
+  <!-- 13 — DRESS CODE -->
+  <section class="slide">
+    <div class="bg" style="background-image:url('assets/stock/s13-dress-code.jpg');"></div>
+    <div class="veil left"></div>
+    <div class="content left-mid">
+      <div class="kicker on-dark reveal d1">Dress Code</div>
+      <h3 class="h-section on-dark reveal d2">Dressed<br>with devotion</h3>
+      <ul class="list on-dark reveal d3">
+        <li>Sarees are encouraged at the Temple — especially the <b>last three days</b>. Otherwise, a ¾ kurti and scarf is fine around Parthi.</li>
+        <li>Saree-tying ladies will be available on the last three days.</li>
+        <li>Please bring safety pins.</li>
+        <li>Men — long pants and a shirt.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 14 — TEMPLE ETIQUETTE -->
+  <section class="slide">
+    <div class="bg" style="background-image:url('assets/stock/s14-temple-etiquette.jpg');"></div>
+    <div class="veil bottom"></div>
+    <div class="content bl">
+      <div class="kicker reveal d1" style="color:#C79A4E;">Temple Etiquette</div>
+      <h3 class="h-section on-dark reveal d2">Entering the sacred</h3>
+      <ul class="list on-dark reveal d3">
+        <li>Please wash your feet before entering the Temple.</li>
+        <li>Sarees on the last three days.</li>
+        <li>When seated near the Sanctum, remain still and silent.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 15 — THE PROGRAMME -->
+  <section class="slide">
+    <div class="bg" style="background-image:url('assets/maa/maa-hero.jpg');background-position:center 18%;"></div>
+    <div class="veil left"></div>
+    <div class="content left-mid">
+      <div class="kicker on-dark reveal d1">The Programme</div>
+      <h3 class="h-section on-dark reveal d2" style="margin-bottom:.3rem;">Nine evenings<br>of devotion</h3>
+      <ul class="list on-dark reveal d3">
+        <li>Evening programme on <b>days 1–9</b>: the bathing and dressing of Maa, and devotional songs &amp; bhajans.</li>
+        <li>The <b>Homa</b> takes place on the <span class="hl">last day only</span>, from 8am to 11am.</li>
+        <li>On Dasera day, lunch is offered after the Homa.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 16 — THANK YOU -->
+  <section class="slide">
+    <div class="bg pan-right" style="background-image:url('assets/maa/maa-jasmine.jpg');background-position:center 20%;"></div>
+    <div class="veil soft"></div>
+    <div class="content center">
+      <h2 class="thanks reveal d2">Thank you</h2>
+      <div class="date-line reveal d3" style="margin-top:1.2rem;">🙏</div>
+    </div>
+  </section>
+
+</div>
+
+<!-- CHROME -->
+<div id="bar" class="chrome"></div>
+<div id="mark" class="chrome">Navratri Yatra</div>
+<div id="counter" class="chrome"><span class="cur">01</span> / 16</div>
+<button id="prev" class="chrome nav-arrow" aria-label="Previous">‹</button>
+<button id="next" class="chrome nav-arrow" aria-label="Next">›</button>
+<div id="dots" class="chrome"></div>
+<div id="hint" class="chrome">Use ← → or swipe</div>
+
+<script>
+(function(){
+  const slides=[...document.querySelectorAll('.slide')];
+  const total=slides.length;
+  let i=0, animating=false;
+  const dotsWrap=document.getElementById('dots');
+  const counter=document.querySelector('#counter .cur');
+  const bar=document.getElementById('bar');
+
+  slides.forEach((_,n)=>{
+    const b=document.createElement('button');
+    b.setAttribute('aria-label','Go to slide '+(n+1));
+    b.addEventListener('click',()=>go(n));
+    dotsWrap.appendChild(b);
+  });
+  const dots=[...dotsWrap.children];
+
+  function paint(){
+    slides.forEach((s,n)=>s.classList.toggle('active',n===i));
+    dots.forEach((d,n)=>d.classList.toggle('on',n===i));
+    counter.textContent=String(i+1).padStart(2,'0');
+    bar.style.width=((i+1)/total*100)+'%';
+  }
+  function go(n){
+    if(n<0||n>=total||n===i||animating) return;
+    animating=true;
+    i=n; paint();
+    setTimeout(()=>animating=false,700);
+  }
+  const next=()=>go(i+1), prev=()=>go(i-1);
+
+  document.getElementById('next').addEventListener('click',next);
+  document.getElementById('prev').addEventListener('click',prev);
+
+  window.addEventListener('keydown',e=>{
+    if(['ArrowRight','ArrowDown','PageDown',' '].includes(e.key)){e.preventDefault();next();}
+    else if(['ArrowLeft','ArrowUp','PageUp'].includes(e.key)){e.preventDefault();prev();}
+    else if(e.key==='Home'){go(0);} else if(e.key==='End'){go(total-1);}
+  });
+
+  let x0=null,y0=null;
+  window.addEventListener('touchstart',e=>{x0=e.touches[0].clientX;y0=e.touches[0].clientY;},{passive:true});
+  window.addEventListener('touchend',e=>{
+    if(x0===null)return;
+    const dx=e.changedTouches[0].clientX-x0, dy=e.changedTouches[0].clientY-y0;
+    if(Math.abs(dx)>50 && Math.abs(dx)>Math.abs(dy)){ dx<0?next():prev(); }
+    x0=y0=null;
+  },{passive:true});
+
+  let wlock=false;
+  window.addEventListener('wheel',e=>{
+    if(wlock)return;
+    if(Math.abs(e.deltaY)<18 && Math.abs(e.deltaX)<18)return;
+    wlock=true;
+    (e.deltaY>0||e.deltaX>0)?next():prev();
+    setTimeout(()=>wlock=false,900);
+  },{passive:true});
+
+  paint();
+})();
+</script>
+</body>
+</html>
