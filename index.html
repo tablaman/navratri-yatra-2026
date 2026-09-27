@@ -97,10 +97,13 @@ body{
 
 /* ---- veils for legibility ---- */
 .veil{position:absolute;inset:0;}
-.veil.bottom{background:linear-gradient(to top, rgba(30,24,18,.72) 0%, rgba(30,24,18,.25) 40%, rgba(30,24,18,0) 68%);}
-.veil.left{background:linear-gradient(to right, rgba(30,24,18,.66) 0%, rgba(30,24,18,.20) 45%, rgba(30,24,18,0) 75%);}
+.veil.bottom{background:linear-gradient(to top, rgba(28,22,16,.90) 0%, rgba(28,22,16,.68) 28%, rgba(28,22,16,.44) 48%, rgba(28,22,16,.20) 66%, rgba(28,22,16,.05) 82%, rgba(28,22,16,0) 94%);}
+.veil.left{background:linear-gradient(to right, rgba(28,22,16,.84) 0%, rgba(28,22,16,.52) 34%, rgba(28,22,16,.14) 62%, rgba(28,22,16,0) 82%);}
 .veil.soft{background:linear-gradient(to top, rgba(30,24,18,.45), rgba(30,24,18,.10));}
 .veil.paper{background:linear-gradient(135deg, rgba(247,241,230,.86), rgba(239,228,210,.72));}
+/* light centre scrim — lifts DARK text off a busy pastel photo while keeping the edges visible */
+.veil.glow{background:radial-gradient(ellipse 68% 62% at 50% 52%, rgba(249,244,234,.90) 0%, rgba(249,244,234,.62) 38%, rgba(249,244,234,.18) 66%, rgba(249,244,234,0) 82%);}
+.veil.glow-green{background:radial-gradient(ellipse 70% 64% at 50% 50%, rgba(244,246,236,.90) 0%, rgba(244,246,236,.60) 38%, rgba(244,246,236,.16) 66%, rgba(244,246,236,0) 82%);}
 
 /* ---- content ---- */
 .content{
@@ -128,11 +131,11 @@ body{
 /* ============ TYPE ============ */
 .kicker{
   font-family:"Selawik";font-weight:600;
-  font-size:clamp(11px,1.1vw,14px);
+  font-size:clamp(13px,1.25vw,18px);
   letter-spacing:.42em;text-transform:uppercase;
   color:var(--gold);margin-bottom:1.4rem;
 }
-.kicker.on-dark{color:#E9C878;}
+.kicker.on-dark{color:#F3D98F;text-shadow:0 1px 2px rgba(0,0,0,.9), 0 2px 16px rgba(0,0,0,.7);}
 
 .display{
   font-family:"Craos","Selawik",serif;
@@ -159,28 +162,28 @@ body{
 
 .h-section{
   font-family:"Selawik";font-weight:700;
-  font-size:clamp(32px,5.4vw,68px);
+  font-size:clamp(34px,5.4vw,72px);
   line-height:1.04;letter-spacing:-.01em;
 }
-.h-section.on-dark{color:#FBF7EF;text-shadow:0 4px 30px rgba(0,0,0,.35);}
+.h-section.on-dark{color:#FBF7EF;text-shadow:0 3px 16px rgba(0,0,0,.62), 0 8px 40px rgba(0,0,0,.4);}
 .h-section.on-light{color:var(--ink);}
 
 .lead{
   font-family:"Selawik";font-weight:300;
-  font-size:clamp(17px,2vw,24px);
-  line-height:1.5;max-width:36ch;
+  font-size:clamp(21px,2.5vw,34px);
+  line-height:1.5;max-width:34ch;
 }
-.lead.on-dark{color:#F2EADB;}
+.lead.on-dark{color:#F5EEE0;text-shadow:0 2px 12px rgba(0,0,0,.6);}
 .lead.on-light{color:var(--ink-soft);}
 
 /* list */
-.list{list-style:none;display:flex;flex-direction:column;gap:1rem;margin-top:2rem;max-width:44ch;}
+.list{list-style:none;display:flex;flex-direction:column;gap:1.15rem;margin-top:2rem;max-width:46ch;}
 .list li{
   font-family:"Selawik";font-weight:300;
-  font-size:clamp(16px,1.85vw,23px);
-  line-height:1.4;position:relative;padding-left:2.1rem;
+  font-size:clamp(19px,2.15vw,30px);
+  line-height:1.42;position:relative;padding-left:2.1rem;
 }
-.list.on-dark li{color:#F2EADB;}
+.list.on-dark li{color:#F5EEE0;text-shadow:0 2px 11px rgba(0,0,0,.6);}
 .list.on-light li{color:var(--ink);}
 .list li::before{
   content:"";position:absolute;left:0;top:.62em;
@@ -199,7 +202,7 @@ body{
   border:1px solid rgba(251,247,239,.30);
   backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
   color:#FBF7EF;font-weight:400;
-  font-size:clamp(15px,1.7vw,21px);
+  font-size:clamp(18px,2vw,27px);
 }
 .pill .em{font-size:1.3em;}
 
@@ -213,7 +216,7 @@ body{
 }
 .card h4{
   font-family:"Selawik";font-weight:700;
-  font-size:clamp(17px,1.9vw,24px);color:var(--ink);
+  font-size:clamp(19px,2vw,27px);color:var(--ink);
   margin-bottom:1.2rem;display:flex;align-items:center;gap:.6rem;flex-wrap:wrap;
 }
 .card .tag{
@@ -224,13 +227,13 @@ body{
 .card ul{list-style:none;display:flex;flex-direction:column;gap:.85rem;}
 .card li{
   font-family:"Selawik";font-weight:300;
-  font-size:clamp(15px,1.6vw,20px);color:var(--ink);
-  padding-left:1.5rem;position:relative;line-height:1.35;
+  font-size:clamp(17px,1.85vw,25px);color:var(--ink);
+  padding-left:1.5rem;position:relative;line-height:1.38;
 }
 .card li::before{content:"";position:absolute;left:0;top:.6em;width:7px;height:7px;border-radius:50%;background:var(--gold);}
 .note{
   margin-top:1.8rem;font-family:"Selawik";font-weight:300;font-style:italic;
-  font-size:clamp(14px,1.5vw,19px);color:var(--ink-soft);max-width:60ch;
+  font-size:clamp(16px,1.7vw,23px);color:var(--ink-soft);max-width:60ch;
 }
 .note.on-dark{color:#EBE0CE;}
 .strike{text-decoration:line-through;opacity:.5;}
@@ -250,9 +253,9 @@ body{
   background:linear-gradient(to top, rgba(30,24,18,.82), rgba(30,24,18,0));
   color:#FBF7EF;
 }
-.gcard .cap .n{font-family:"Selawik";font-weight:600;font-size:clamp(18px,2vw,26px);}
-.gcard .cap .c{font-family:"Selawik";font-weight:300;font-size:clamp(14px,1.5vw,18px);color:#EBD9B4;margin-top:.25rem;letter-spacing:.02em;}
-.gnote{margin-top:1.4rem;font-weight:300;font-style:italic;color:var(--ink-soft);font-size:clamp(14px,1.5vw,18px);}
+.gcard .cap .n{font-family:"Selawik";font-weight:600;font-size:clamp(20px,2.2vw,30px);}
+.gcard .cap .c{font-family:"Selawik";font-weight:300;font-size:clamp(16px,1.7vw,22px);color:#EBD9B4;margin-top:.3rem;letter-spacing:.02em;}
+.gnote{margin-top:1.4rem;font-weight:300;font-style:italic;color:var(--ink-soft);font-size:clamp(16px,1.7vw,22px);}
 .gnote.on-dark{color:#EBE0CE;}
 
 /* thanks */
@@ -372,11 +375,11 @@ body{
   <!-- 04 — THE INNER JOURNEY -->
   <section class="slide">
     <div class="bg" style="background-image:url('assets/stock/s04-inner-journey.jpg');"></div>
-    <div class="veil soft"></div>
+    <div class="veil glow"></div>
     <div class="content center">
-      <div class="kicker reveal d1" style="color:#B4894A;">Intention</div>
-      <h3 class="display title-2 reveal d2" style="color:#4A3E30;text-shadow:none;">The inner journey</h3>
-      <p class="lead on-light reveal d3" style="margin-top:1.6rem;color:#6A5F52;">
+      <div class="kicker reveal d1" style="color:#9A6E2E;text-shadow:0 1px 10px rgba(249,244,234,.9);">Intention</div>
+      <h3 class="display title-2 reveal d2" style="color:#3D3226;text-shadow:0 2px 18px rgba(249,244,234,.95);">The inner journey</h3>
+      <p class="lead on-light reveal d3" style="margin-top:1.6rem;color:#544A3C;text-shadow:0 1px 12px rgba(249,244,234,.92);">
         Beyond the miles we travel lies the journey inward — the true purpose of this Yatra.
       </p>
     </div>
@@ -402,7 +405,7 @@ body{
     <div class="bg" style="background-image:url('assets/stock/s06-transport.jpg');"></div>
     <div class="veil bottom"></div>
     <div class="content bl">
-      <div class="kicker reveal d1" style="color:#C08A4A;">Getting There &amp; Around</div>
+      <div class="kicker reveal d1" style="color:#F3BC6D;text-shadow:0 1px 2px rgba(0,0,0,.9), 0 2px 16px rgba(0,0,0,.7);">Getting There &amp; Around</div>
       <h3 class="h-section on-dark reveal d2">Transport requirements</h3>
       <p class="lead on-dark reveal d3">
         Ground transport is arranged for the group throughout your stay in Parthi —
@@ -433,7 +436,7 @@ body{
     <div class="bg" style="background-image:url('assets/stock/s08-optional-extras.jpg');"></div>
     <div class="veil bottom"></div>
     <div class="content bl">
-      <div class="kicker reveal d1" style="color:#C08A4A;">At Your Discretion</div>
+      <div class="kicker reveal d1" style="color:#F3BC6D;text-shadow:0 1px 2px rgba(0,0,0,.9), 0 2px 16px rgba(0,0,0,.7);">At Your Discretion</div>
       <h3 class="h-section on-dark reveal d2">Optional extras</h3>
       <div class="pills reveal d3">
         <span class="pill"><span class="em">🚗</span> Airport transfers</span>
@@ -513,11 +516,11 @@ body{
   <!-- 12 — SPECIAL CONSIDERATIONS -->
   <section class="slide">
     <div class="bg" style="background-image:url('assets/stock/s12-healing-nature.jpg');"></div>
-    <div class="veil soft"></div>
+    <div class="veil glow-green"></div>
     <div class="content center">
-      <div class="kicker reveal d1" style="color:#8FA36A;">With Care &amp; Grace</div>
-      <h3 class="display title-2 reveal d2" style="color:#3F4A32;text-shadow:none;">Special considerations</h3>
-      <p class="lead reveal d3" style="margin-top:1.4rem;color:#4E5A3E;text-align:center;max-width:40ch;">
+      <div class="kicker reveal d1" style="color:#5F7038;text-shadow:0 1px 10px rgba(244,246,236,.9);">With Care &amp; Grace</div>
+      <h3 class="display title-2 reveal d2" style="color:#323C26;text-shadow:0 2px 18px rgba(244,246,236,.95);">Special considerations</h3>
+      <p class="lead reveal d3" style="margin-top:1.4rem;color:#404A30;text-align:center;max-width:40ch;text-shadow:0 1px 12px rgba(244,246,236,.92);">
         A gentle word on menstruation, pregnancy, married couples, and taking part in the Homa —
         speak with us quietly and we'll guide you with love.
       </p>
@@ -545,7 +548,7 @@ body{
     <div class="bg" style="background-image:url('assets/stock/s14-temple-etiquette.jpg');"></div>
     <div class="veil bottom"></div>
     <div class="content bl">
-      <div class="kicker reveal d1" style="color:#C79A4E;">Temple Etiquette</div>
+      <div class="kicker reveal d1" style="color:#F3BC6D;text-shadow:0 1px 2px rgba(0,0,0,.9), 0 2px 16px rgba(0,0,0,.7);">Temple Etiquette</div>
       <h3 class="h-section on-dark reveal d2">Entering the sacred</h3>
       <ul class="list on-dark reveal d3">
         <li>Please wash your feet before entering the Temple.</li>
