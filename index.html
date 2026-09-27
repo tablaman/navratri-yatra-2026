@@ -209,11 +209,19 @@ body{
 /* two-column card (costs) */
 .cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,48px);margin-top:2.4rem;max-width:1000px;width:100%;}
 .card{
-  background:rgba(251,247,239,.90);
-  border:1px solid rgba(201,162,75,.35);
-  border-radius:22px;padding:clamp(22px,2.6vw,38px);
-  box-shadow:var(--shadow);backdrop-filter:blur(6px);
+  /* iOS-latest frosted glass — heavy blur + saturate mutes the photo behind
+     so dark copy stays legible; translucent light fill keeps the glass feel */
+  background:rgba(251,247,239,.55);
+  border:1px solid rgba(255,255,255,.55);
+  border-radius:24px;padding:clamp(22px,2.6vw,38px);
+  box-shadow:0 10px 40px -12px rgba(58,50,42,.42), inset 0 1px 0 rgba(255,255,255,.65);
+  backdrop-filter:blur(28px) saturate(180%);
+  -webkit-backdrop-filter:blur(28px) saturate(180%);
+  text-align:left;
 }
+/* bullets & headings inside cards always read left-aligned, even when the
+   parent .content.center centres everything else on the slide */
+.card h4,.card ul,.card li{text-align:left;}
 .card h4{
   font-family:"Selawik";font-weight:700;
   font-size:clamp(19px,2vw,27px);color:var(--ink);
@@ -448,7 +456,7 @@ body{
 
   <!-- 09 — COSTS -->
   <section class="slide">
-    <div class="bg" style="background-image:url('assets/stock/s09-currency.jpg');"></div>
+    <div class="bg" style="background-image:url('assets/stock/s09-rupees.jpg');"></div>
     <div class="veil paper"></div>
     <div class="content center">
       <div class="kicker reveal d1">Costs</div>
